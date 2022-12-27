@@ -38,20 +38,45 @@ export const Cafeteria = (id) => {
       <div className="conteinerLC">
         <div className="conteinerLB2">
           <img
+          id="1"
             src="https://cdn.shopify.com/s/files/1/0613/6342/1411/files/a_900x900.png?v=1669254768"
             alt="promo"
           />
-          <div id="1"></div>
           <Cards products={Cafex} />
-          <div id="2"></div>
+      
+          <img
+          id="2"
+            src="https://cdn.shopify.com/s/files/1/0613/6342/1411/files/a_900x900.png?v=1669254768"
+            alt="promo"
+          />
           <Cards products={CafeEspecial} />
-          <div id="3"></div>
+          <div ></div>
+          <img
+          id="3"
+            src="https://cdn.shopify.com/s/files/1/0613/6342/1411/files/a_900x900.png?v=1669254768"
+            alt="promo"
+          />
           <Cards products={Infusionesx} />
-          <div id="4"></div>
+          <div ></div>
+          <img
+          id="4"
+            src="https://cdn.shopify.com/s/files/1/0613/6342/1411/files/a_900x900.png?v=1669254768"
+            alt="promo"
+          />
           <Cards products={ColdBrew} />
-          <div id="5"></div>
+          <div ></div>
+          <img
+          id="5"
+            src="https://cdn.shopify.com/s/files/1/0613/6342/1411/files/a_900x900.png?v=1669254768"
+            alt="promo"
+          />
           <Cards products={CafeFrio} />
-          <div id="6"></div>
+          <div ></div>
+          <img
+          id="6"
+            src="https://cdn.shopify.com/s/files/1/0613/6342/1411/files/a_900x900.png?v=1669254768"
+            alt="promo"
+          />
           <Cards products={Desayunox} />
         </div>
       </div>

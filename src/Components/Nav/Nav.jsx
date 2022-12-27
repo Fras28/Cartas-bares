@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import { asyncSearchBar} from "../redux/slice";
 import { useParams } from "react-router";
 
 
@@ -16,29 +15,9 @@ export const Nav = (id, url) => {
   console.log(lola, "acaaaaaaaaaaaaaaaaaaaa")
 
   const dispatch = useDispatch();
-  const [search, setSearch] = useState("");
+
 
   let copyallProducts = useSelector((state) => state.allData);
-
-  const handleChange = (e) => {
-    //setError(false);
-    setSearch(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(asyncSearchBar(search));
-
-    setSearch("");
-  };
-
-  const handleEnter = (e) => {
-    if (e.key !== "Enter") {
-      return;
-    }
-    dispatch(asyncSearchBar(search));
-    setSearch("");
-  };
 
   return (
     <div className="contNav">

@@ -25,15 +25,15 @@ export const dataSlice = createSlice({
     state.favProd =[...state.favProd, action.payload]
     },
     cancelBagProducts:(state, action) => {
+      console.log(action.payload)
+      console.log(state.favProd, "estadoooooooooooooooooooooooooooooooooooooo")
      const indexProd = state.favProd.indexOf(action.payload)
      if(indexProd !==" -1"){
        const newBag = state.favProd.splice(indexProd,1)
        state.favProd = state.favProd.filter(e => e !== newBag)
      }else  state.favProd = state.favProd 
     },
-    SearchProducts:(state, action) => {
-     state.copyallProducts= state.copyallProducts.filter(e=> e.name.includes(action.payload)===true).slice(0,10)
-    }
+   
   },
 });
 
@@ -57,11 +57,7 @@ export const asyncCancelFav = (pedido) => {
     return dispatch(cancelBagProducts(pedido));
   };
 };
-export const asyncSearchBar = (string)=>{
-  return async function (dispatch) {
-    return dispatch(SearchProducts(string));
-  };
-}
+
 
 //----------------------------------------------------------------------------------------------------------------
 

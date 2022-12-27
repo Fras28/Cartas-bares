@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "../../Cards/Card/Card";
 
 
 import { CardBag } from "../CardB/CardB";
@@ -8,6 +9,9 @@ import "./CardsB.css";
 export const CardsBag = ({ products }) => {
   const valores = products.map((e) => parseInt(e.price, 10));
   let total = valores.reduce((a, b) => a + b, 0);
+  const filtrado = products.filter((item,index)=>{
+    return products.indexOf(item) === index;
+  })
 
   return (
     <div className="cartaB">
@@ -15,8 +19,8 @@ export const CardsBag = ({ products }) => {
         <span className="aPagar">Total :${total} </span>
       </div>
       <div className="rowsCardBag">
-        {products?.map((e) => (
-          <CardBag producto={e} />
+        {filtrado?.map((e) => (
+          <Card producto={e} />
         ))}
       </div>
     </div>

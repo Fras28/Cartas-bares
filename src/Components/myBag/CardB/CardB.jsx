@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import Swal from "sweetalert2";
+
 import { asyncCancelFav} from "../../redux/slice";
 import "./CardB.css";
 
@@ -11,19 +11,9 @@ export const CardBag = ({ producto }) => {
   });
 
   let cancelFav = function cancelBagArticle(e) {
-    setArticles({
-      ...articles,
-      name: producto.name,
-      price: producto.price,
-    });
-    dispatch(asyncCancelFav(producto));
-    Swal.fire({
-      position: "bottom-end",
-      icon: "",
-      title: "Eliminado",
-      showConfirmButton: false,
-      timer: 350,
-    });
+ 
+    dispatch(asyncCancelFav(producto.name));
+
   };
 
   return (
